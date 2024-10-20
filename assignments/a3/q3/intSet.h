@@ -6,8 +6,8 @@ class intSet {
   int size;
   int capacity;
  public:
-  intSet(); // default constructor
-  intSet(const intSet& is); // copy constructor
+  intSet(); // default constructor done
+  intSet(const intSet& is); // copy constructor done
   intSet(intSet &&is); // move constructor
   intSet &operator=(const intSet& is); // copy assignment operator
   intSet &operator=(intSet &&is); // move assignment operator
@@ -17,7 +17,7 @@ class intSet {
   bool operator==(const intSet &other) const;  // Set equality.
   bool isSubset(const intSet &s) const;  // True if s is a subset of *this
   bool contains(int e) const;     // True if *this contains e
-  void add(int e);          // Add e to this set.
+  void add(int e);          // Add e to this set. done
   void remove(int e);       // Remove e from this set.
   friend std::ostream& operator<<(std::ostream& out, const intSet& is); // output operator for intSet
 };

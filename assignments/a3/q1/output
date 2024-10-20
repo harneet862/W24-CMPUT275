@@ -1,0 +1,5 @@
+#! /bin/bash
+cmd=$1; file=$2
+for i in $(cat $file); do
+    ${cmd} < "${i}.in" > "${i}.out" 
+done

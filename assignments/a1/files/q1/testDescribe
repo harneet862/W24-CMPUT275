@@ -1,0 +1,19 @@
+#! /bin/env bash
+
+x=$#
+
+if [[ $x -eq 0 ]]; then 
+    echo "Usage: ./testDescribe testSetFile" >&2
+elif [[ $x -eq 1 ]]; then
+    path=$1
+    for i in $(cat ${path}); do
+        file="${i}.desc"
+        if [[ -e ${file} ]]; then
+            echo $(cat ${file})
+        else
+            echo "${i} No test description"
+        fi
+    done    
+fi
+
+    

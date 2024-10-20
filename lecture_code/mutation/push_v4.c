@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void pop(int *arr, int len){
+  int *p = malloc((len-1)*sizeof(int))
+  for (int i=0; i<(len-1); i++){
+    p[i] = arr[i];
+  }
+  *arr = p;
+}
+
 void push(int **p, size_t *len, size_t *cap, int val) {
   if (*len == *cap) {
     int *newArr = malloc(*cap*sizeof(int)*2);
@@ -27,5 +35,6 @@ int main() {
     printf("%d ", arr[i]);
   }
   printf("\n");
+  void()
   free(arr);
 }

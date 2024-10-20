@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-const char * const GREEN = "\x1b[32m"; 
+const char * const GREEN = "\x1b[32m";
 const char * const YELLOW = "\x1b[33m";
 const char * const WHITE = "\x1b[0m";
 const char * current = WHITE;
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         char guess[13];
             strcpy(word, argv[1]); // copying the 1st pointer value to the word 
             // variable to calculate the length of word
-            int len = strlen(word); //use argv[1] directly
+            int len = strlen(word);
             int n = 6;
             // if something wrong happens in the code error will be made True (1)
             int error = 0; // 1 means no error and 0 means error 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
                 scanf("%s", guess);
                 //These are redeclared everytime because the guesses are changing evrytime 
                 char greencolor[12]= {0,0,0,0,0,0,0,0,0,0,0,0};
-                char yellowcolor[12] = {0,0,0,0,0,0,0,0,0,0,0,0}; //use ASCII characters 
+                char yellowcolor[12] = {0,0,0,0,0,0,0,0,0,0,0,0};
                 char color[12] = {0};   // this represents the letters in the actual word
 
                 // Finding the length so to check if the guessed word length matches with the right word
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
 
                      for (int i =0; i < len; i++){      
                            // This for loop will compare if we get that character anywhere else and that character in the original word should not used before (which is obtained by marking it 1 in its own array)
-                        for (int j =0; j<len; j++){ // use struct to map a key to value (like index and color)
+                        for (int j =0; j<len; j++){
                             if(guess[i] == word[j] && i==j){
                                 break;
                             }
